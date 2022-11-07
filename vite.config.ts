@@ -31,7 +31,7 @@ export default defineConfig({
     minify: true, // 混淆，工具 terset esbuild
     outDir: 'DemoDist',
     lib: {
-      entry: './src/components/entry.ts',
+      entry: './src/components/index.ts',
       name: 'DemoDist',
       fileName: 'DemoDist',
       // 导出模块格式

@@ -2,6 +2,7 @@
   <i :class="'i-ep:' + iconName" />
 </template>
 <script setup lang="ts">
+import 'uno.css'
 export type LIconType = 'circle-close-filled' | 'circle-check-filled'
 export interface IconProps {
   name: LIconType

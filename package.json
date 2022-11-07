@@ -15,7 +15,9 @@
     "pre-commit": "lint-staged",
     "postinstallmac": "git config core.hooksPath .husky && chmod 700 .husky/*",
     "eslint": "eslint --ignore-pattern '!<relative/path/to/filename>' --cache --max-warnings 10  \"{src,mock}/**/*.{vue,ts,js,tsx}\" --fix  ",
-    "commit": "git add . && git-cz"
+    "commit": "git add . && git-cz",
+    "build:demand": "pnpm build:components",
+    "build:components": "esno ./scripts/build.ts"
   },
   "keywords": [],
   "author": "",
@@ -52,6 +54,8 @@
     "web-norm": "^1.0.25"
   },
   "dependencies": {
+    "esno": "^0.16.3",
+    "fs-extra": "^10.1.0",
     "vitepress": "1.0.0-alpha.27",
     "vitepress-demoblock": "^1.0.4",
     "vue": "^3.2.41"

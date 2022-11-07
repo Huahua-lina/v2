@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+import 'uno.css'
 export type color = 'green' | 'red' | 'blue'
 export type size = 'large' | 'small' | 'normal'
 export interface PropsType {

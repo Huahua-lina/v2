@@ -1,3 +1,7 @@
 // @ts-ignore
-import LButton from './index.vue'
-export default LButton
+import LButton from './Button.vue'
+export default {
+  install(app) {
+    app.compoennt(LButton.name, LButton)
+  }
+}
