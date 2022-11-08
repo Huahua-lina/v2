@@ -1,16 +1,11 @@
 import { createApp } from 'vue'
-import NaUI from '../NaUI/NaUI.mjs'
-import '../NaUI/assets/index.c7ed3603.css'
-// import NaUI from './components/index'
+import NaUI from '../NaUI'
 createApp({
   template: `
-  <div style="backgrouond-color:red;height:100px;">
-  <NaButton>你好啊</NaButton>
-  </div>
+    // <NaButton>你好啊</NaButton>
+    // <NaToast>asdasd</NaToast>
+  <NaCount />
   `
 })
   .use(NaUI)
-  // .use(NaButton) // 增加整个组件
-  // .use(NaIcon)
-  // .component(LUI.name, LUI) // 增加单个组件
   .mount('#app')

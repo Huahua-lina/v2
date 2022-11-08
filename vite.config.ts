@@ -3,6 +3,7 @@ import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJSX from '@vitejs/plugin-vue-jsx'
 import dts from 'vite-plugin-dts'
+import libCss from 'vite-plugin-libcss'
 // import UnoCssConfig from './src/config/unocss'
 // import libCss from 'vite-plugin-libcss'
 export default defineConfig({
@@ -13,7 +14,6 @@ export default defineConfig({
       staticImport: true,
       insertTypesEntry: true
     }),
-    // libCss(),
     vue(),
     vueJSX({})
     // UnoCssConfig()
@@ -30,7 +30,7 @@ export default defineConfig({
     }
   },
   build: {
-    cssCodeSplit: true, // css代码分离
+    // cssCodeSplit: true, // css代码分离
     rollupOptions: {
       // input: './src/components/index.ts',
       external: ['vue', 'vue-router'], // 不需要打包的库处理

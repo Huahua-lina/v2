@@ -22,7 +22,7 @@ async function Start() {
           lib: {
             entry: path.resolve(srcDir, name + '/index.ts'),
             name, // 导出模块名
-            fileName: name,
+            fileName: 'index',
             formats: ['es', 'umd']
           },
           outDir
@@ -38,8 +38,8 @@ async function Start() {
           path.resolve(outDir, `package.json`),
           `{
             "name": "NaUI/${name}",
-            "main": "index.umd.js",
-            "module": "index.umd.js"
+            "main": "index.mjs",
+            "module": "index.mjs"
           }`,
           `utf-8`
         )

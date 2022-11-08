@@ -1,7 +1,8 @@
 <template>
-  <div class=".toast">我是一个Toast</div>
+  <div class="toast">
+    <slot />
+  </div>
 </template>
-<script lang="ts" setup></script>
 <script lang="ts">
 export default {
   name: 'NaToast'

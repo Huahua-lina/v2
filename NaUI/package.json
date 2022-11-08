@@ -1,0 +1,5 @@
+{
+  "name": "NaUI",
+  "main": "NaUI.mjs",
+  "module": "NaUI.mjs"
+}
