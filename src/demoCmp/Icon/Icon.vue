@@ -1,5 +1,5 @@
 <template>
-  <i :class="'i-ep:' + iconName" />
+  <i :class="'i-ep:' + iconName"></i>
 </template>
 <script setup lang="ts">
 import 'uno.css'
@@ -12,10 +12,10 @@ export interface IconProps {
 const props = withDefaults(defineProps<IconProps>(), {
   name: 'circle-check-filled'
 })
-const iconName = props.name
+const iconName: string = props.name
 </script>
 <script lang="ts">
 export default {
-  name: 'LIcon'
+  name: 'NaIcon'
 }
 </script>

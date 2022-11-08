@@ -17,8 +17,6 @@ const className = `bg-${props.color}-500 `
 </script>
 
 <script lang="ts">
-export default {
-  name: 'LButton'
-}
+export default { name: 'NaButton' }
 </script>
 <style lang="scss" scoped></style>

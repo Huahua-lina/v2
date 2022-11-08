@@ -1,11 +1,14 @@
 {
-	"compilerOptions": {
-		"declaration": true /* 生成相关的 '.d.ts' 文件。 */,
-		"declarationDir": "./dist/types" /* '.d.ts' 文件输出目录 */,
-		"jsx": "preserve"
-	},
-	"include": [],
-	"exclude": ["node_modules"],
-	"esModuleInterop": true,
-	"allowSyntheticDefaultImports": "true"
+  "compilerOptions": {
+    "target": "ES2015",
+    "module": "CommonJS",
+    "declaration": true /* 生成相关的 '.d.ts' 文件。 */,
+    "declarationDir": "./NaUI/types" /* '.d.ts' 文件输出目录 */,
+    "jsx": "preserve",
+    "outDir": "./NaUI/types"
+  },
+  "include": ["./src/config"],
+  "exclude": ["node_modules/**", "dist"],
+  "esModuleInterop": true,
+  "allowSyntheticDefaultImports": "true"
 }

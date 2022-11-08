@@ -2,9 +2,22 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJSX from '@vitejs/plugin-vue-jsx'
-import UnoCssConfig from './src/config/unocss'
+import dts from 'vite-plugin-dts'
+// import UnoCssConfig from './src/config/unocss'
+// import libCss from 'vite-plugin-libcss'
 export default defineConfig({
-  plugins: [vue(), vueJSX({}), UnoCssConfig()],
+  root: './',
+  plugins: [
+    dts({
+      outputDir: 'NaUI/',
+      staticImport: true,
+      insertTypesEntry: true
+    }),
+    // libCss(),
+    vue(),
+    vueJSX({})
+    // UnoCssConfig()
+  ],
   // 增加构建时别名
   resolve: {
     alias: {
@@ -19,6 +32,7 @@ export default defineConfig({
   build: {
     cssCodeSplit: true, // css代码分离
     rollupOptions: {
+      // input: './src/components/index.ts',
       external: ['vue', 'vue-router'], // 不需要打包的库处理
       output: {
         // 用于 umd/iffe包中，全局中的某个模块在组件库中交什么
@@ -27,13 +41,14 @@ export default defineConfig({
         }
       }
     },
+
     sourcemap: true, // 单独生成 sourceMap
     minify: true, // 混淆，工具 terset esbuild
-    outDir: 'DemoDist',
+    outDir: 'NaUI',
     lib: {
       entry: './src/components/index.ts',
-      name: 'DemoDist',
-      fileName: 'DemoDist',
+      name: 'NaUI',
+      fileName: 'NaUI',
       // 导出模块格式
       formats: ['es']
     }
